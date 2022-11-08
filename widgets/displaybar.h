@@ -31,8 +31,11 @@ public:
 
     QString name() const;
     void setName(const QString &name);
-    double range() const;
+    double posRange() const;
+    double negRange() const;
     void setRange(double range);
+    void setPosRange(double posRange);
+    void setNegRange(double negRange);
     double val() const;
     void setVal(double val);
     QString unit() const;
@@ -49,7 +52,8 @@ protected:
 
 private:
     QString mName;
-    double mRange;
+    double mPosRange;
+    double mNegRange;
     double mVal;
     QString mUnit;
     int mDecimals;
